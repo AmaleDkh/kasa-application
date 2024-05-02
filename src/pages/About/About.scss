@@ -1,0 +1,9 @@
+.commitment-container {
+  padding: 0px 120px;
+}
+
+@media all and (max-width: 650px) {
+  .commitment-container {
+    padding: 0;
+  }
+}
