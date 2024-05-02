@@ -1,5 +1,5 @@
 // Data
-import accomodationsList from "../../assets/data/accomodationsList.json";
+import accommodationsList from "../../assets/data/accommodationsList.json";
 
 // Components
 import Layout from "../../components/Layout/Layout";
@@ -11,9 +11,9 @@ function Home() {
     <Layout>
       <Banner location="Home" />
       <div className="card">
-        {accomodationsList.map((accomodation) => (
-          <div key={accomodation.id}>
-            <Card accomodation={accomodation} />
+        {accommodationsList.map((accommodation) => (
+          <div key={accommodation.id}>
+            <Card accommodation={accommodation} />
           </div>
         ))}
       </div>

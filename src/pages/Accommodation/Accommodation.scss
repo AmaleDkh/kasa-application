@@ -1,6 +1,6 @@
 @import "../../assets//styles/Colors.scss";
 
-.accomodation {
+.accommodation {
   margin: 0 40px;
 
   &__container {
@@ -65,7 +65,7 @@
 }
 
 @media all and (max-width: 650px) {
-  .accomodation {
+  .accommodation {
     margin: 0;
 
     &__container {
