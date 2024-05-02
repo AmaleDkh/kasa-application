@@ -1,0 +1,86 @@
+@import "../../assets//styles/Colors.scss";
+
+.accomodation {
+  margin: 0 40px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    &__principal-information {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 25px;
+
+      &__host {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        &__identity {
+          color: $primary-color;
+          padding-right: 12px;
+          font-size: 18px;
+        }
+
+        &__picture {
+          width: 64px;
+          border-radius: 50%;
+        }
+      }
+
+      &__title {
+        font-size: 36px;
+        font-weight: 500;
+        color: $primary-color;
+      }
+
+      &__location {
+        margin-top: 8px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+
+    &__second-content {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    &__third-content {
+      display: flex;
+      margin-top: 24px;
+      justify-content: space-between;
+      gap: 42px;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .accomodation {
+    margin: 0;
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__container__second-content {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+
+    &__container__third-content {
+      flex-direction: column;
+      margin-top: 0;
+      gap: 0;
+    }
+  }
+}
