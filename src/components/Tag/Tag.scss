@@ -1,0 +1,15 @@
+@import "../../assets/styles/Colors.scss";
+
+.tags-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+
+  &__tag-word {
+    background-color: $primary-color;
+    color: white;
+    font-weight: 500;
+    padding: 6px 32px;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,67 @@
+@import "../../assets/styles/Colors.scss";
+
+.collapse-container {
+  margin: 20px 0px;
+  width: 100%;
+
+  &__card {
+    background-color: $primary-color;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+
+    &__name {
+      margin-left: 20px;
+    }
+
+    &__icon {
+      margin-right: 20px;
+      cursor: pointer;
+      transition: transform 0.5s ease;
+    }
+
+    .angle-down {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__content {
+    margin-top: 16px;
+    max-height: 100px;
+    overflow: hidden;
+
+    div {
+      margin-bottom: 5px;
+    }
+  }
+
+  .expanded {
+    transition: max-height 0.25s ease-out;
+    overflow: hidden;
+  }
+
+  .closed {
+    max-height: 0;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-25%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-25%);
+  }
+}
