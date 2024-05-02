@@ -1,0 +1,48 @@
+.header {
+  margin: 32px 54px;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+      cursor: pointer;
+    }
+
+    &__links {
+      font-size: 24px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 64px;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      a.active {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .header {
+    margin: 30px 16px;
+
+    &__nav__logo img {
+      width: 145px;
+    }
+
+    &__nav__links {
+      gap: 16px;
+      text-transform: uppercase;
+
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+}
