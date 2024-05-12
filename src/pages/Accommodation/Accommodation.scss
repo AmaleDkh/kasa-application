@@ -1,18 +1,45 @@
 @import "../../assets//styles/Colors.scss";
+@import "../../assets/styles/mixins/breakpoints.scss";
 
-.accommodation {
+.accommodation-container {
   margin: 0 40px;
 
-  &__container {
+  @include respond-to(mobile) {
+    margin: 0;
+  }
+
+  &__first-content {
     display: flex;
     justify-content: space-between;
-    margin-top: 16px;
+    margin-top: 24px;
 
-    &__principal-information {
+    @include respond-to(mobile) {
+      flex-direction: column;
+    }
+
+    &__location-information {
+      &__title {
+        font-size: 36px;
+        font-weight: 500;
+        color: $primary-color;
+      }
+
+      &__location {
+        margin-top: 8px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+
+    &__host-information {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      margin-top: 25px;
+      justify-content: space-around;
+
+      @include respond-to(mobile) {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+      }
 
       &__host {
         display: flex;
@@ -30,57 +57,22 @@
           border-radius: 50%;
         }
       }
-
-      &__title {
-        font-size: 36px;
-        font-weight: 500;
-        color: $primary-color;
-      }
-
-      &__location {
-        margin-top: 8px;
-        font-size: 18px;
-        font-weight: 500;
-      }
-    }
-
-    &__second-content {
-      margin-top: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
-
-    &__third-content {
-      display: flex;
-      margin-top: 24px;
-      justify-content: space-between;
-      gap: 42px;
-
-      li {
-        list-style: none;
-      }
     }
   }
-}
 
-@media all and (max-width: 650px) {
-  .accommodation {
-    margin: 0;
+  &__second-content {
+    display: flex;
+    margin-top: 24px;
+    gap: 40px;
 
-    &__container {
-      flex-direction: column;
-    }
-
-    &__container__second-content {
-      justify-content: space-between;
-      flex-direction: row-reverse;
-    }
-
-    &__container__third-content {
+    @include respond-to(mobile) {
       flex-direction: column;
       margin-top: 0;
       gap: 0;
+    }
+
+    li {
+      list-style: none;
     }
   }
 }

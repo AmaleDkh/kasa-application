@@ -12,9 +12,7 @@ function Home() {
       <Banner location="Home" />
       <div className="card">
         {accommodationsList.map((accommodation) => (
-          <div key={accommodation.id}>
-            <Card accommodation={accommodation} />
-          </div>
+          <Card key={accommodation.id} accommodation={accommodation} />
         ))}
       </div>
     </Layout>

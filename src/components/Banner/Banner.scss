@@ -1,6 +1,12 @@
+@import "../../assets/styles/mixins/breakpoints.scss";
+
 .banner {
   height: 223px;
   position: relative;
+
+  @include respond-to(mobile) {
+    height: 111px;
+  }
 
   &::before {
     content: "";
@@ -29,14 +35,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-}
 
-@media all and (max-width: 650px) {
-  .banner {
-    height: 111px;
-
-    &__title {
+    @include respond-to(mobile) {
       font-size: 24px;
       text-align: left;
       width: 68%;

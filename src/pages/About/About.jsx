@@ -13,15 +13,16 @@ function About() {
   return (
     <Layout>
       <Banner location="About" />
-      {commitmentsList.map((element, index) => (
-        <div className="commitment-container" key={`${index}-${element}`}>
+      <div className="commitments">
+        {commitmentsList.map((element, index) => (
           <Collapse
             key={element.id}
+            className="commitment-container"
             name={element.name}
             content={element.content}
           />
-        </div>
-      ))}
+        ))}
+      </div>
     </Layout>
   );
 }

@@ -1,7 +1,7 @@
 // Style
 import "../Tag/Tag.scss";
 
-function Tags({ tags }) {
+function Tag({ tags }) {
   return (
     <div className="tags-container">
       {tags.map((tag, index) => (
@@ -13,4 +13,4 @@ function Tags({ tags }) {
   );
 }
 
-export default Tags;
+export default Tag;

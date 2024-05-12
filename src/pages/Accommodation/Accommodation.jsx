@@ -38,16 +38,16 @@ function Accommodation() {
   return (
     <Layout>
       {accommodation && (
-        <div className="accommodation" key={accommodation.id}>
+        <div className="accommodation-container" key={accommodation.id}>
           <Slideshow pictures={accommodation.pictures} />
 
-          <div className="accommodation__container">
-            <div className="accommodation-container__principal-information">
+          <div className="accommodation-container__first-content">
+            <div className="accommodation-container__first-content__location-information">
               <div>
-                <div className="accommodation__container__principal-information__title">
+                <div className="accommodation-container__first-content__location-information__title">
                   {accommodation.title}
                 </div>
-                <div className="accommodation__container__principal-information__location">
+                <div className="accommodation-container__first-content__location-information__location">
                   {accommodation.location}
                 </div>
               </div>
@@ -55,20 +55,20 @@ function Accommodation() {
               <Tag tags={accommodation.tags} />
             </div>
 
-            <div className="accommodation__container__second-content">
-              <div className="accommodation__container__principal-information__host">
-                <div className="accommodation__container__principal-information__host__identity">
-                  <div className="accommodation__container__principal-information__host__identity__firstname">
+            <div className="accommodation-container__first-content__host-information">
+              <div className="accommodation-container__first-content__host-information__host">
+                <div className="accommodation-container__first-content__host-information__host__identity">
+                  <div className="accommodation-container__first-content__host-information__host__identity__firstname">
                     {firstName}
                   </div>
-                  <div className="accommodation__container__principal-information__host__identity__lastname">
+                  <div className="accommodation-container__first-content__principal-information__host__identity__lastname">
                     {lastName}
                   </div>
                 </div>
                 <img
                   src={accommodation.host.picture}
                   alt=""
-                  className="accommodation__container__principal-information__host__picture"
+                  className="accommodation-container__first-content__host-information__host__picture"
                 />
               </div>
 
@@ -76,8 +76,11 @@ function Accommodation() {
             </div>
           </div>
 
-          <div className="accommodation__container__third-content">
-            <Collapse name={"Description"} content={accommodation.description} />
+          <div className="accommodation-container__second-content">
+            <Collapse
+              name={"Description"}
+              content={accommodation.description}
+            />
             <Collapse name={"Équipements"} content={accommodation.equipments} />
           </div>
         </div>

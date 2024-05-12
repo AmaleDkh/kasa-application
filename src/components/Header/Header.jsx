@@ -18,11 +18,14 @@ function Header() {
 
   return (
     <header className="header">
-      <nav className="header__nav">
-        <div className="header__nav__logo">
-          <img src={pinkLogo} alt="" onClick={redirectionHome} />
-        </div>
+      <img
+        src={pinkLogo}
+        alt=""
+        className="header__logo"
+        onClick={redirectionHome}
+      />
 
+      <nav className="header__nav">
         <div className="header__nav__links">
           <Link to="/" className={location.pathname === "/" ? "active" : null}>
             Accueil

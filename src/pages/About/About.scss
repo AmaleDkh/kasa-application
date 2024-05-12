@@ -1,9 +1,10 @@
-.commitment-container {
-  padding: 0px 120px;
-}
+@import "../../assets/styles/mixins/breakpoints.scss";
 
-@media all and (max-width: 650px) {
-  .commitment-container {
+.commitments {
+  margin-top: 32px;
+  padding: 0px 120px;
+
+  @include respond-to(mobile) {
     padding: 0;
   }
 }
