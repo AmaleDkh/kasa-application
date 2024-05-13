@@ -1,9 +1,15 @@
 @import "../../assets/styles/Colors.scss";
+@import "../../assets/styles/mixins/breakpoints.scss";
 
 .rating-stars {
   display: flex;
   gap: 12px;
   margin-top: 16px;
+
+  @include respond-to(mobile) {
+    margin-top: 0;
+    align-items: center;
+  }
 
   &__validated,
   &__not-validated {

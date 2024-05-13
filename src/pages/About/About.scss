@@ -1,7 +1,8 @@
 @import "../../assets/styles/mixins/breakpoints.scss";
 
 .commitments {
-  margin-top: 32px;
+  // margin-top: 32px;
+  margin: 24px 0 8px 0;
   padding: 0px 120px;
 
   @include respond-to(mobile) {
