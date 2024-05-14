@@ -15,6 +15,11 @@
   &__not-validated {
     width: 24px;
     height: 24px;
+
+    @include respond-to(mobile) {
+      width: 13px;
+      height: 13px;
+    }
   }
 
   &__validated {

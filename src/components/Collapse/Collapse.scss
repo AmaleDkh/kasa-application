@@ -1,4 +1,5 @@
 @import "../../assets/styles/Colors.scss";
+@import "../../assets/styles/mixins/breakpoints.scss";
 
 .collapse-container {
   width: 100%;
@@ -14,6 +15,11 @@
 
     &__name {
       margin-left: 20px;
+
+      @include respond-to(mobile) {
+        font-size: 10px;
+        margin: 8px 0 8px 20px;
+      }
     }
 
     &__icon {
@@ -22,6 +28,11 @@
       transition: transform 0.5s ease;
       width: 32px;
       height: 32px;
+
+      @include respond-to(mobile) {
+        width: 16px;
+        height: 16px;
+      }
     }
 
     .angle-down {

@@ -1,9 +1,11 @@
 @import "../../assets/styles/Colors.scss";
+@import "../../assets/styles/mixins/breakpoints.scss";
 
 .tags-container {
   display: flex;
   gap: 16px;
   margin-top: 16px;
+  flex-wrap: wrap;
 
   &__tag-word {
     background-color: $primary-color;
@@ -11,5 +13,11 @@
     font-weight: 500;
     padding: 6px 32px;
     border-radius: 10px;
+
+    @include respond-to(mobile) {
+      font-size: 10px;
+      padding: 3px 32px;
+      border-radius: 5px;
+    }
   }
 }

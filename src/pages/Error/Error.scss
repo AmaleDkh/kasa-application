@@ -25,10 +25,15 @@
 
     @include respond-to(mobile) {
       text-align: center;
+      font-size: 18px;
     }
   }
 
   &__redirection {
     color: black;
+
+    @include respond-to(mobile) {
+      font-size: 14px;
+    }
   }
 }

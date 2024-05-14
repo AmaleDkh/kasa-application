@@ -1,13 +1,13 @@
+@import "../styles/mixins/breakpoints.scss";
+
 body {
   margin: 0;
 }
 
 main {
   margin: 0 54px;
-}
 
-@media all and (max-width: 650px) {
-  main {
+  @include respond-to(mobile) {
     margin: 0 16px;
   }
 }
