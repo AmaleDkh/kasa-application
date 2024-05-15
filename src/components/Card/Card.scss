@@ -12,8 +12,15 @@
   margin: 32px 0;
   gap: 24px;
 
+  a {
+    @include respond-to(mobile) {
+      width: 100%;
+    }
+  }
+
   @include respond-to(mobile) {
     background-color: white;
+    padding: 0;
   }
 
   &__container {
@@ -22,7 +29,6 @@
 
     @include respond-to(mobile) {
       height: 255px;
-      width: 335px;
     }
 
     &__title {
