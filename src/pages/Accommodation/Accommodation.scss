@@ -39,7 +39,7 @@
       }
     }
 
-    &__host-information {
+    &__host {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -50,7 +50,7 @@
         flex-direction: row-reverse;
       }
 
-      &__host {
+      &__information {
         display: flex;
         align-items: center;
         justify-content: end;

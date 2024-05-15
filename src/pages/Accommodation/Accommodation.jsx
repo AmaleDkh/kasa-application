@@ -55,20 +55,20 @@ function Accommodation() {
               <Tag tags={accommodation.tags} />
             </div>
 
-            <div className="accommodation-container__first-content__host-information">
-              <div className="accommodation-container__first-content__host-information__host">
-                <div className="accommodation-container__first-content__host-information__host__identity">
-                  <div className="accommodation-container__first-content__host-information__host__identity__firstname">
+            <div className="accommodation-container__first-content__host">
+              <div className="accommodation-container__first-content__host__information">
+                <div className="accommodation-container__first-content__host__information__identity">
+                  <div>
                     {firstName}
                   </div>
-                  <div className="accommodation-container__first-content__principal-information__host__identity__lastname">
+                  <div>
                     {lastName}
                   </div>
                 </div>
                 <img
                   src={accommodation.host.picture}
                   alt=""
-                  className="accommodation-container__first-content__host-information__host__picture"
+                  className="accommodation-container__first-content__host__information__picture"
                 />
               </div>
 
