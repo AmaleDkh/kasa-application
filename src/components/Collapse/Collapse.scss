@@ -41,7 +41,7 @@
   }
 
   &__content {
-    margin-top: 16px;
+    margin-top: 24px;
     max-height: 112px;
     overflow: hidden;
 
@@ -51,11 +51,11 @@
   }
 
   .expanded {
-    transition: max-height 0.25s ease-out;
+    transition: max-height 0.45s ease-out;
     overflow: hidden;
     background-color: $secondary-color;
-    padding: 8px 0 24px 0;
-    margin: 16px 0 24px 0;
+    padding: 16px 8px 24px 8px;
+    margin: 0 0 24px 0;
   }
 
   .closed {
